@@ -43,7 +43,9 @@ function generateMarkdown(data) {
 
   [My Github](https://github.com/${data.githubUserName})
 
-  If you have any additional questions, you can contact me at ${data.email}
+  If you have any additional questions, you can contact me at [My Email](mailto:${
+    data.email
+  })
   
   ## License
   

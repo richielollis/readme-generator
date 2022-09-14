@@ -56,7 +56,7 @@ const promptUser = () => {
 };
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+function writeToFile(data) {
   fs.writeFile("./dist/README.md", data, (err) => {
     if (err) {
       console.log(err);
@@ -66,9 +66,13 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-  promptUser().then((answers) => {
-    return generateMarkdown(answers);
-  });
+  promptUser()
+    .then((answers) => {
+      return generateMarkdown(answers);
+    })
+    .then((pageMD) => {
+      writeToFile(pageMD);
+    });
 }
 
 // Function call to initialize app
