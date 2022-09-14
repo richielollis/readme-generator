@@ -23,7 +23,8 @@ function generateMarkdown(data) {
   
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Credits](#credits)
+  - [Credits](#contributing)
+  - [Questions](#questions)
   - [License](#license)
   
   ## Installation
@@ -50,7 +51,7 @@ function generateMarkdown(data) {
   ${data.license}
   ${renderLicenseLink}
   ${renderLicenseSection(data.license)}
-  
+
 `;
 }
 
