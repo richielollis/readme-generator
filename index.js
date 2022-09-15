@@ -8,48 +8,48 @@ const promptUser = () => {
   return inquirer.prompt([
     {
       type: "input",
-      message: "Title:",
+      message: "What is the title of your project?",
       name: "title",
     },
     {
       type: "input",
-      message: "Description:",
+      message: "Please give a description of your project.",
       name: "description",
     },
     {
       type: "input",
-      message: "Installation:",
+      message: "What are the installation instructions for your project?",
       name: "installation",
     },
     {
       type: "input",
-      message: "Usage:",
+      message: "What is the usage of your project?",
       name: "usage",
     },
     {
       type: "list",
-      message: "Lisence:",
-      name: "lisence",
-      choices: ["MIT", "GLP", "LGPL", "Mozilla Public License", "none"],
+      message: "Choose the license that your project is covered under.",
+      name: "license",
+      choices: ["MIT", "GLP", "LGPL", "None"],
     },
     {
       type: "input",
-      message: "Contribution Guidelines:",
+      message: "What are the contribution guidelines for your project?",
       name: "contribution",
     },
     {
       type: "input",
-      message: "Test Instructions:",
+      message: "What are the test instructions for your project?",
       name: "tests",
     },
     {
       type: "input",
-      message: "GitHub Username:",
+      message: "What is your Github username?",
       name: "githubUserName",
     },
     {
       type: "input",
-      message: "Email:",
+      message: "What is your email address?",
       name: "email",
     },
   ]);
@@ -57,7 +57,7 @@ const promptUser = () => {
 
 // TODO: Create a function to write README file
 function writeToFile(data) {
-  fs.writeFile("./dist/README.md", data, (err) => {
+  fs.writeFile("./dist/generated-README.md", data, (err) => {
     if (err) {
       console.log(err);
     }
